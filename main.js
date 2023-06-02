@@ -13,7 +13,7 @@
     let calcTotal = document.querySelector(".calc-total")
     let subtract = document.querySelector(".calc-subtract")
     let btnCLear = document.querySelector(".calc-clear")
-
+    let btnMult = document.querySelector(".calc-mult")
 
     num1.addEventListener('click', function(){
     calcScreen.textContent += "1" 
@@ -56,7 +56,6 @@
 let sum = []
 let sumtotal = 0
 
-
 Addition.addEventListener('click', function(){
 const number = calcScreen.textContent
 let converted = Number(number)
@@ -70,7 +69,7 @@ calcScreen.textContent = ''
 
 btnCLear.addEventListener('click', function(){
 calcScreen.textContent = '0'
-
+sum =[]
 
 })
 subtract.addEventListener('click', function(){
@@ -83,6 +82,17 @@ subtract.addEventListener('click', function(){
     calcScreen.textContent = ''
 });
 
+btnMult.addEventListener('click', function(){
+    const number = calcScreen.textContent
+    let converted = Number(number)
+    sum.push(converted)
+    
+     sumtotal = sum.reduce((a,b) => a*b)
+    console.log(sum)
+    calcScreen.textContent = ''
+
+
+});
 calcTotal.addEventListener('click', function(){
     calcScreen.textContent = sumtotal
     
