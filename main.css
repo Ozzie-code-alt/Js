@@ -1,0 +1,44 @@
+*{
+
+    /* outline: red dashed 1px; */
+    margin: 0;
+    padding: 0;
+}
+
+.even-main-center{
+display: grid;
+position: relative;
+}
+.main-title-container{
+margin: auto;
+height: 90px;
+width:  250px;
+}
+
+
+.main-Container{
+margin: auto;
+margin-top: 1rem;
+display: grid;
+height: 300px;
+width: 400px;
+}
+
+
+.main-Container .main-calculator-case .calc-main-buttons{
+
+display: grid;
+grid-template-columns: repeat(4, minmax(100px, 1fr));
+height: 200px;
+grid-gap: 10px;
+}
+
+.main-Container .main-calculator-case .calc-main-buttons .calc-buttons{
+position: inherit;
+ display:flex;
+ background-color: aqua;
+}
+.main-Container .main-calculator-case .calc-main-buttons .calc-buttons p{
+margin: auto;
+color: brown;
+}
